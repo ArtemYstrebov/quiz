@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+*{
+    font-family: "Roboto Mono", monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Щоб првильно рахувало ширину елементів */
+}
+body {
+    background: #337c3f;
+}
+
+.screen {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    width: 100%;
+    background: #133018;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    padding-bottom: 100px;
+}
+
+.screen.active {
+    z-index: 1;
+    opacity: 1;
+}
+
+h1,
+p {
+    color: white;
+    text-align: center;
+}
+
+.btn {
+    padding: 7px 15px;
+    width: 280px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+}
+
+.quiz__question {
+    font-size: 68px;
+}
+
+.quiz__answers {
+    display: flex;
+    gap: 15px;
+}
+
+.answer {
+    padding: 10px;
+    font-size: 22px;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.quiz__counter {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-size: 22px;
+}
+
+.result__title {
+    max-width: 500px;
+}
+
+button:disabled,
+button[disabled] {
+    background-color: white;
+    color: black;
+}
+
+.timer {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  font-size: 24px;
+  border: 4px dashed white;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 42px;
+  display : none;
+  color : white
+}
